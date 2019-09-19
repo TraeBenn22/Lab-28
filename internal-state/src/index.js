@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Form from '../components/form';
@@ -9,18 +10,21 @@ class App extends React.Component {
         super(props);
         this.state = {
             count: 0,
-            name: 'Your name here',
+            name: 'Your text here',
         };
     }
 
     handleFormUpdate = () => {
-        this.setState({ count: this.state.count + 1 });
+        this.setState({  count: this.state.count + 1 });
     };
 
     render() {
         return (
             <>
+                <p>happy</p>
                 <Form handleFormUpdate={this.handleFormUpdate} />
+
+
             </>
         );
     }
