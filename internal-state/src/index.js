@@ -5,7 +5,14 @@ import './styles.css';
 
 class App extends React.Component {
   render() {
-    return <div />;
+    return (
+      <React.Fragment>
+        <div>
+          <div>Name: </div>
+          <div># of Updates: </div>
+        </div>
+      </React.Fragment>
+    );
   }
 }
 
