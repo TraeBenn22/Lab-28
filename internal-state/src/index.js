@@ -1,20 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Form from '../components/form';
 
 import './styles.css';
 
 class App extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <div>
-          <div>Name: </div>
-          <div># of Updates: </div>
-        </div>
-      </React.Fragment>
-    );
-  }
-}
+    constructor(props) {
+        super(props);
+        this.state = {
+            count: 0,
+            name: 'Your name here',
+        };
+    }
 
+    handleFormUpdate = () => {
+        this.setState({ count: this.state.count + 1 });
+    };
+
+    render() {
+        return (
+            <>
+                <Form handleFormUpdate={this.handleFormUpdate} />
+            </>
+        );
+    }
+}
 const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);
